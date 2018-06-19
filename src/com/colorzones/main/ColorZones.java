@@ -33,6 +33,23 @@ public class ColorZones extends Canvas {
 		
 		JLabel jl4 = new JLabel("Did you remain in school throughout the day? (Y/N)");
 		JTextField jt4 = new JTextField((int) 1);
+		
+		JLabel jl5 = new JLabel("Did you have appropriate boundries with peers and staff? (Y/N)");
+		JTextField jt5 = new JTextField((int) 1);
+		
+		JLabel jl6 = new JLabel("Did you do anything extra around the house? (Y/N)");
+		JTextField jt6 = new JTextField((int) 1);
+		
+		JLabel jl7 = new JLabel("Did you follow staff prompts and program rules? (Y/N)");
+		JTextField jt7 = new JTextField((int) 1);
+		
+		JLabel jl8 = new JLabel("Are your belongings orginized? (Y/N)");
+		JTextField jt8 = new JTextField((int) 1);
+		
+		JLabel jl9 = new JLabel("Did you work on any of your PAYA skills? (Y/N)");
+		JTextField jt9 = new JTextField((int) 1);
+		
+		JLabel afternoon = new JLabel("===== AFTERNOON (4pm - 12am) =====");
 
 		panel.setBackground(Color.WHITE);
 		panel.setPreferredSize(new Dimension(width / 3, 500));
@@ -50,6 +67,23 @@ public class ColorZones extends Canvas {
 		
 		panel.add(jl4);
 		panel.add(jt4);
+		
+		panel.add(jl5);
+		panel.add(jt5);
+		
+		panel.add(jl6);
+		panel.add(jt6);
+		
+		panel.add(jl7);
+		panel.add(jt7);
+		
+		panel.add(jl8);
+		panel.add(jt8);
+		
+		panel.add(jl9);
+		panel.add(jt9);
+		
+		panel.add(afternoon);
 
 		frame.getContentPane().add(panel);
 		frame.pack();
