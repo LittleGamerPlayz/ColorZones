@@ -24,6 +24,7 @@ public class ColorZones extends Canvas {
 		JFrame frame = new JFrame();
 
 		JLabel morning = new JLabel("======== MORNING (8am - 4pm) ========");
+		
 		JLabel jl1 = new JLabel("Did you behave well during the overnight? (Y/N)");
 		JTextField jt1 = new JTextField((int) 1);
 
@@ -38,25 +39,25 @@ public class ColorZones extends Canvas {
 
 		JLabel jl5 = new JLabel("Did you have appropriate boundries with peers and staff? (Y/N)");
 		JTextField jt5 = new JTextField((int) 1);
-
-		JLabel jl6 = new JLabel("Did you do anything extra around the house? (Y/N)");
+		
+		JLabel jl6 = new JLabel("Did you have appropriate language with peers and staff? (Y/N)");
 		JTextField jt6 = new JTextField((int) 1);
-
-		JLabel jl7 = new JLabel("Did you follow staff prompts and program rules? (Y/N)");
+		
+		JLabel jl7 = new JLabel("Did you do anything extra around the house? (Y/N)");
 		JTextField jt7 = new JTextField((int) 1);
 
-		JLabel jl8 = new JLabel("Are your belongings orginized? (Y/N)");
+		JLabel jl8 = new JLabel("Did you follow staff prompts and program rules? (Y/N)");
 		JTextField jt8 = new JTextField((int) 1);
 
-		JLabel jl9 = new JLabel("Did you work on any of your PAYA skills? (Y/N)");
+		JLabel jl9 = new JLabel("Are your belongings orginized? (Y/N)");
 		JTextField jt9 = new JTextField((int) 1);
+
+		JLabel jl10 = new JLabel("Did you work on any of your PAYA skills? (Y/N)");
+		JTextField jt10 = new JTextField((int) 1);
 
 		JLabel afternoon = new JLabel("======== AFTERNOON (4pm - 12am) ========");
 
-		JLabel jl10 = new JLabel("Did you do well in tutoring or group? (Y/N)");
-		JTextField jt10 = new JTextField((int) 1);
-
-		JLabel jl11 = new JLabel("Did you have an appropriate dinner time routine? (Y/N)");
+		JLabel jl11 = new JLabel("Did you do well in tutoring or group? (Y/N)");
 		JTextField jt11 = new JTextField((int) 1);
 
 		JLabel jl12 = new JLabel("Did you have an appropriate dinner time routine? (Y/N)");
