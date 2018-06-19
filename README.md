@@ -1,0 +1,2 @@
+# ColorZones
+Calculates residents color.
