@@ -22,8 +22,8 @@ public class ColorZones extends Canvas {
 	public static int ys;
 	public static int ns;
 	public static int ss;
-	public static double total = ys + ns;
-	public static double percent = ys / total;
+	public static int t = ys + ns;
+	
 
 	public static void main(String[] args) {
 		JPanel panel = new JPanel();
@@ -524,10 +524,6 @@ public class ColorZones extends Canvas {
 			}
 		});
 		
-		while (percent != 0) {
-			System.out.println(percent);
-		}
-
 		frame.getContentPane().add(panel);
 		frame.pack();
 		frame.setTitle("Color Zones");
