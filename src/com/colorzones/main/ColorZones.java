@@ -18,17 +18,18 @@ public class ColorZones extends Canvas {
 
 	public static final int width = Toolkit.getDefaultToolkit().getScreenSize().width / 1;
 	public static final int height = Toolkit.getDefaultToolkit().getScreenSize().height / 1;
+	public static final String y = "Y";
 
 	public static void main(String[] args) {
 		JPanel panel = new JPanel();
 		JFrame frame = new JFrame();
 
 		JLabel morning = new JLabel("======== MORNING (8am - 4pm) ========");
-		
+
 		JLabel jl1 = new JLabel("Did you behave well during the overnight? (Y/N)");
 		JTextField jt1 = new JTextField((int) 1);
 
-		JLabel jl2 = new JLabel("Did you wake up ontime and get on transportation? (Y/N)");
+		JLabel jl2 = new JLabel("Did you wake up on time and get on transportation? (Y/N)");
 		JTextField jt2 = new JTextField((int) 1);
 
 		JLabel jl3 = new JLabel("Did you make your bed in the morning? (Y/N)");
@@ -39,10 +40,10 @@ public class ColorZones extends Canvas {
 
 		JLabel jl5 = new JLabel("Did you have appropriate boundries with peers and staff? (Y/N)");
 		JTextField jt5 = new JTextField((int) 1);
-		
+
 		JLabel jl6 = new JLabel("Did you have appropriate language with peers and staff? (Y/N)");
 		JTextField jt6 = new JTextField((int) 1);
-		
+
 		JLabel jl7 = new JLabel("Did you do anything extra around the house? (Y/N)");
 		JTextField jt7 = new JTextField((int) 1);
 
@@ -72,22 +73,25 @@ public class ColorZones extends Canvas {
 		JLabel jl15 = new JLabel("Did you have appropriate boundries with peers and staff? (Y/N)");
 		JTextField jt15 = new JTextField((int) 1);
 
-		JLabel jl16 = new JLabel("Did you follow staff prompts and program rules througout the shift? (Y/N)");
+		JLabel jl16 = new JLabel("Did you have appropriate language with peers and staff? (Y/N)");
 		JTextField jt16 = new JTextField((int) 1);
 
-		JLabel jl17 = new JLabel("Did you do your after dinner chore? (Y/N)");
+		JLabel jl17 = new JLabel("Did you follow staff prompts and program rules througout the shift? (Y/N)");
 		JTextField jt17 = new JTextField((int) 1);
 
-		JLabel jl18 = new JLabel("Did you show any positive leadership or role model behaviors? (Y/N)");
+		JLabel jl18 = new JLabel("Did you do your after dinner chore? (Y/N)");
 		JTextField jt18 = new JTextField((int) 1);
 
-		JLabel jl19 = new JLabel("Did you work on any of your PAYA skills? (Y/N)");
+		JLabel jl19 = new JLabel("Did you show any positive leadership or role model behaviors? (Y/N)");
 		JTextField jt19 = new JTextField((int) 1);
+
+		JLabel jl20 = new JLabel("Did you work on any of your PAYA skills? (Y/N)");
+		JTextField jt20 = new JTextField((int) 1);
 
 		JButton jb1 = new JButton("CLICK WHEN FINISHED TO CALCULATE COLOR");
 
 		panel.setBackground(Color.WHITE);
-		panel.setPreferredSize(new Dimension(width / 3 + 50, 550));
+		panel.setPreferredSize(new Dimension(width / 3 + 50, 570));
 
 		panel.add(morning);
 
@@ -118,10 +122,10 @@ public class ColorZones extends Canvas {
 		panel.add(jl9);
 		panel.add(jt9);
 
-		panel.add(afternoon);
-
 		panel.add(jl10);
 		panel.add(jt10);
+
+		panel.add(afternoon);
 
 		panel.add(jl11);
 		panel.add(jt11);
@@ -150,6 +154,9 @@ public class ColorZones extends Canvas {
 		panel.add(jl19);
 		panel.add(jt19);
 
+		panel.add(jl20);
+		panel.add(jt20);
+
 		panel.add(jb1);
 
 		jt1.addActionListener(new ActionListener() {
@@ -165,18 +172,130 @@ public class ColorZones extends Canvas {
 				System.out.println(input2);
 			}
 		});
-		
+
 		jt3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String input3 = jt3.getText();
 				System.out.println(input3);
 			}
 		});
-		
+
 		jt4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String input4 = jt4.getText();
-				System.out.println(input3);
+				System.out.println(input4);
+			}
+		});
+
+		jt5.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String input5 = jt5.getText();
+				System.out.println(input5);
+			}
+		});
+
+		jt6.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String input6 = jt6.getText();
+				System.out.println(input6);
+			}
+		});
+
+		jt7.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String input7 = jt7.getText();
+				System.out.println(input7);
+			}
+		});
+
+		jt8.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String input8 = jt8.getText();
+				System.out.println(input8);
+			}
+		});
+
+		jt9.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String input9 = jt9.getText();
+				System.out.println(input9);
+			}
+		});
+
+		jt10.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String input10 = jt10.getText();
+				System.out.println(input10);
+			}
+		});
+
+		jt11.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String input11 = jt11.getText();
+				System.out.println(input11);
+			}
+		});
+
+		jt12.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String input12 = jt12.getText();
+				System.out.println(input12);
+			}
+		});
+
+		jt13.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String input13 = jt13.getText();
+				System.out.println(input13);
+			}
+		});
+
+		jt14.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String input14 = jt14.getText();
+				System.out.println(input14);
+			}
+		});
+
+		jt15.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String input15 = jt15.getText();
+				System.out.println(input15);
+			}
+		});
+
+		jt16.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String input16 = jt16.getText();
+				System.out.println(input16);
+			}
+		});
+
+		jt17.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String input17 = jt17.getText();
+				System.out.println(input17);
+			}
+		});
+
+		jt18.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String input18 = jt18.getText();
+				System.out.println(input18);
+			}
+		});
+
+		jt19.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String input19 = jt19.getText();
+				System.out.println(input19);
+			}
+		});
+
+		jt20.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String input20 = jt20.getText();
+				System.out.println(input20);
 			}
 		});
 
