@@ -19,6 +19,8 @@ public class ColorZones extends Canvas {
 	public static final int width = Toolkit.getDefaultToolkit().getScreenSize().width / 1;
 	public static final int height = Toolkit.getDefaultToolkit().getScreenSize().height / 1;
 	public static final String y = "Y";
+	public static int ys;
+	public static int ns;
 
 	public static void main(String[] args) {
 		JPanel panel = new JPanel();
@@ -163,6 +165,13 @@ public class ColorZones extends Canvas {
 			public void actionPerformed(ActionEvent e) {
 				String input1 = jt1.getText();
 				System.out.println(input1);
+				if (input1.equals("Y")) {
+					ys++;
+					System.out.print("YS: " + ys);
+				} else {
+					ns++;
+					System.out.print("NS: " + ns);
+				}
 			}
 		});
 
@@ -170,6 +179,13 @@ public class ColorZones extends Canvas {
 			public void actionPerformed(ActionEvent e) {
 				String input2 = jt2.getText();
 				System.out.println(input2);
+				if (input2 != null && input2 == "Y") {
+					ys++;
+					System.out.print("YS: " + ys);
+				} else {
+					ns++;
+					System.out.print("NS: " + ns);
+				}
 			}
 		});
 
@@ -177,6 +193,13 @@ public class ColorZones extends Canvas {
 			public void actionPerformed(ActionEvent e) {
 				String input3 = jt3.getText();
 				System.out.println(input3);
+				if (input3 != null && input3 == "Y") {
+					ys++;
+					System.out.print("YS: " + ys);
+				} else {
+					ns++;
+					System.out.print("NS: " + ns);
+				}
 			}
 		});
 
