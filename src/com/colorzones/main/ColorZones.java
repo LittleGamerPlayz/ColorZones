@@ -21,6 +21,9 @@ public class ColorZones extends Canvas {
 	public static final String y = "Y";
 	public static int ys;
 	public static int ns;
+	public static int ss;
+	public static double total = ys + ns;
+	public static double percent = ys / total;
 
 	public static void main(String[] args) {
 		JPanel panel = new JPanel();
@@ -164,13 +167,17 @@ public class ColorZones extends Canvas {
 		jt1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String input1 = jt1.getText();
-				System.out.println(input1);
 				if (input1.equals("Y")) {
 					ys++;
-					System.out.print("YS: " + ys);
-				} else {
+					System.out.println("YS: " + ys);
+				}
+				if (input1.equals("N")) {
 					ns++;
-					System.out.print("NS: " + ns);
+					System.out.println("NS: " + ns);
+				}
+				if (input1.equals("/")) {
+					ss++;
+					System.out.println("SS: " + ss);
 				}
 			}
 		});
@@ -178,13 +185,17 @@ public class ColorZones extends Canvas {
 		jt2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String input2 = jt2.getText();
-				System.out.println(input2);
-				if (input2 != null && input2 == "Y") {
+				if (input2.equals("Y")) {
 					ys++;
-					System.out.print("YS: " + ys);
-				} else {
+					System.out.println("YS: " + ys);
+				}
+				if (input2.equals("N")) {
 					ns++;
-					System.out.print("NS: " + ns);
+					System.out.println("NS: " + ns);
+				}
+				if (input2.equals("/")) {
+					ss++;
+					System.out.println("SS: " + ss);
 				}
 			}
 		});
@@ -192,13 +203,17 @@ public class ColorZones extends Canvas {
 		jt3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String input3 = jt3.getText();
-				System.out.println(input3);
-				if (input3 != null && input3 == "Y") {
+				if (input3.equals("Y")) {
 					ys++;
-					System.out.print("YS: " + ys);
-				} else {
+					System.out.println("YS: " + ys);
+				}
+				if (input3.equals("N")) {
 					ns++;
-					System.out.print("NS: " + ns);
+					System.out.println("NS: " + ns);
+				}
+				if (input3.equals("/")) {
+					ss++;
+					System.out.println("SS: " + ss);
 				}
 			}
 		});
@@ -206,125 +221,317 @@ public class ColorZones extends Canvas {
 		jt4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String input4 = jt4.getText();
-				System.out.println(input4);
+				if (input4.equals("Y")) {
+					ys++;
+					System.out.println("YS: " + ys);
+				}
+				if (input4.equals("N")) {
+					ns++;
+					System.out.println("NS: " + ns);
+				}
+				if (input4.equals("/")) {
+					ss++;
+					System.out.println("SS: " + ss);
+				}
 			}
 		});
 
 		jt5.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String input5 = jt5.getText();
-				System.out.println(input5);
+				if (input5.equals("Y")) {
+					ys++;
+					System.out.println("YS: " + ys);
+				}
+				if (input5.equals("N")) {
+					ns++;
+					System.out.println("NS: " + ns);
+				}
+				if (input5.equals("/")) {
+					ss++;
+					System.out.println("SS: " + ss);
+				}
 			}
 		});
 
 		jt6.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String input6 = jt6.getText();
-				System.out.println(input6);
+				if (input6.equals("Y")) {
+					ys++;
+					System.out.println("YS: " + ys);
+				}
+				if (input6.equals("N")) {
+					ns++;
+					System.out.println("NS: " + ns);
+				}
+				if (input6.equals("/")) {
+					ss++;
+					System.out.println("SS: " + ss);
+				}
 			}
 		});
 
 		jt7.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String input7 = jt7.getText();
-				System.out.println(input7);
+				if (input7.equals("Y")) {
+					ys++;
+					System.out.println("YS: " + ys);
+				}
+				if (input7.equals("N")) {
+					ns++;
+					System.out.println("NS: " + ns);
+				}
+				if (input7.equals("/")) {
+					ss++;
+					System.out.println("SS: " + ss);
+				}
 			}
 		});
 
 		jt8.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String input8 = jt8.getText();
-				System.out.println(input8);
+				if (input8.equals("Y")) {
+					ys++;
+					System.out.println("YS: " + ys);
+				}
+				if (input8.equals("N")) {
+					ns++;
+					System.out.println("NS: " + ns);
+				}
+				if (input8.equals("/")) {
+					ss++;
+					System.out.println("SS: " + ss);
+				}
 			}
 		});
 
 		jt9.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String input9 = jt9.getText();
-				System.out.println(input9);
+				if (input9.equals("Y")) {
+					ys++;
+					System.out.println("YS: " + ys);
+				}
+				if (input9.equals("N")) {
+					ns++;
+					System.out.println("NS: " + ns);
+				}
+				if (input9.equals("/")) {
+					ss++;
+					System.out.println("SS: " + ss);
+				}
 			}
 		});
 
 		jt10.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String input10 = jt10.getText();
-				System.out.println(input10);
+				if (input10.equals("Y")) {
+					ys++;
+					System.out.println("YS: " + ys);
+				}
+				if (input10.equals("N")) {
+					ns++;
+					System.out.println("NS: " + ns);
+				}
+				if (input10.equals("/")) {
+					ss++;
+					System.out.println("SS: " + ss);
+				}
 			}
 		});
 
 		jt11.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String input11 = jt11.getText();
-				System.out.println(input11);
+				if (input11.equals("Y")) {
+					ys++;
+					System.out.println("YS: " + ys);
+				}
+				if (input11.equals("N")) {
+					ns++;
+					System.out.println("NS: " + ns);
+				}
+				if (input11.equals("/")) {
+					ss++;
+					System.out.println("SS: " + ss);
+				}
 			}
 		});
 
 		jt12.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String input12 = jt12.getText();
-				System.out.println(input12);
+				if (input12.equals("Y")) {
+					ys++;
+					System.out.println("YS: " + ys);
+				}
+				if (input12.equals("N")) {
+					ns++;
+					System.out.println("NS: " + ns);
+				}
+				if (input12.equals("/")) {
+					ss++;
+					System.out.println("SS: " + ss);
+				}
 			}
 		});
 
 		jt13.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String input13 = jt13.getText();
-				System.out.println(input13);
+				if (input13.equals("Y")) {
+					ys++;
+					System.out.println("YS: " + ys);
+				}
+				if (input13.equals("N")) {
+					ns++;
+					System.out.println("NS: " + ns);
+				}
+				if (input13.equals("/")) {
+					ss++;
+					System.out.println("SS: " + ss);
+				}
 			}
 		});
 
 		jt14.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String input14 = jt14.getText();
-				System.out.println(input14);
+				if (input14.equals("Y")) {
+					ys++;
+					System.out.println("YS: " + ys);
+				}
+				if (input14.equals("N")) {
+					ns++;
+					System.out.println("NS: " + ns);
+				}
+				if (input14.equals("/")) {
+					ss++;
+					System.out.println("SS: " + ss);
+				}
 			}
 		});
 
 		jt15.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String input15 = jt15.getText();
-				System.out.println(input15);
+				if (input15.equals("Y")) {
+					ys++;
+					System.out.println("YS: " + ys);
+				}
+				if (input15.equals("N")) {
+					ns++;
+					System.out.println("NS: " + ns);
+				}
+				if (input15.equals("/")) {
+					ss++;
+					System.out.println("SS: " + ss);
+				}
 			}
 		});
 
 		jt16.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String input16 = jt16.getText();
-				System.out.println(input16);
+				if (input16.equals("Y")) {
+					ys++;
+					System.out.println("YS: " + ys);
+				}
+				if (input16.equals("N")) {
+					ns++;
+					System.out.println("NS: " + ns);
+				}
+				if (input16.equals("/")) {
+					ss++;
+					System.out.println("SS: " + ss);
+				}
 			}
 		});
 
 		jt17.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String input17 = jt17.getText();
-				System.out.println(input17);
+				if (input17.equals("Y")) {
+					ys++;
+					System.out.println("YS: " + ys);
+				}
+				if (input17.equals("N")) {
+					ns++;
+					System.out.println("NS: " + ns);
+				}
+				if (input17.equals("/")) {
+					ss++;
+					System.out.println("SS: " + ss);
+				}
 			}
 		});
 
 		jt18.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String input18 = jt18.getText();
-				System.out.println(input18);
+				if (input18.equals("Y")) {
+					ys++;
+					System.out.println("YS: " + ys);
+				}
+				if (input18.equals("N")) {
+					ns++;
+					System.out.println("NS: " + ns);
+				}
+				if (input18.equals("/")) {
+					ss++;
+					System.out.println("SS: " + ss);
+				}
 			}
 		});
 
 		jt19.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String input19 = jt19.getText();
-				System.out.println(input19);
+				if (input19.equals("Y")) {
+					ys++;
+					System.out.println("YS: " + ys);
+				}
+				if (input19.equals("N")) {
+					ns++;
+					System.out.println("NS: " + ns);
+				}
+				if (input19.equals("/")) {
+					ss++;
+					System.out.println("SS: " + ss);
+				}
 			}
 		});
 
 		jt20.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String input20 = jt20.getText();
-				System.out.println(input20);
+				if (input20.equals("Y")) {
+					ys++;
+					System.out.println("YS: " + ys);
+				}
+				if (input20.equals("N")) {
+					ns++;
+					System.out.println("NS: " + ns);
+				}
+				if (input20.equals("/")) {
+					ss++;
+					System.out.println("SS: " + ss);
+				}
 			}
 		});
+		
+		while (percent != 0) {
+			System.out.println(percent);
+		}
 
 		frame.getContentPane().add(panel);
 		frame.pack();
 		frame.setTitle("Color Zones");
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setResizable(false);
 		frame.setLocationRelativeTo(null);
 		frame.setVisible(true);
