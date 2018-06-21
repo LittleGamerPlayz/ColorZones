@@ -18,12 +18,11 @@ public class ColorZones extends Canvas {
 
 	public static final int width = Toolkit.getDefaultToolkit().getScreenSize().width / 1;
 	public static final int height = Toolkit.getDefaultToolkit().getScreenSize().height / 1;
-	public static final String y = "Y";
 	public static int ys;
 	public static int ns;
 	public static int ss;
-	public static int t = ys + ns;
-	
+	public static double t = ys + ns;
+	public static double p = ys / t;
 
 	public static void main(String[] args) {
 		JPanel panel = new JPanel();
@@ -95,8 +94,7 @@ public class ColorZones extends Canvas {
 
 		JButton jb1 = new JButton("CLICK WHEN FINISHED TO CALCULATE COLOR");
 
-		panel.setBackground(Color.WHITE);
-		panel.setPreferredSize(new Dimension(width / 3 + 50, 570));
+		panel.setPreferredSize(new Dimension(width / 3 + 50, 580));
 
 		panel.add(morning);
 
@@ -163,6 +161,16 @@ public class ColorZones extends Canvas {
 		panel.add(jt20);
 
 		panel.add(jb1);
+
+		jb1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if (jb1.getModel().isEnabled()) {
+					double t = ys + ns;
+					double p = ys / t;
+					System.out.println(p);
+				}
+			}
+		});
 
 		jt1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -523,7 +531,7 @@ public class ColorZones extends Canvas {
 				}
 			}
 		});
-		
+
 		frame.getContentPane().add(panel);
 		frame.pack();
 		frame.setTitle("Color Zones");
