@@ -1,7 +1,6 @@
 package com.colorzones.main;
 
 import java.awt.Canvas;
-import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
@@ -21,8 +20,9 @@ public class ColorZones extends Canvas {
 	public static int ys;
 	public static int ns;
 	public static int ss;
-	public static double t = ys + ns;
-	public static double p = ys / t;
+	public static double t;
+	public static double p;
+	public static String percent;
 
 	public static void main(String[] args) {
 		JPanel panel = new JPanel();
@@ -92,9 +92,9 @@ public class ColorZones extends Canvas {
 		JLabel jl20 = new JLabel("Did you work on any of your PAYA skills? (Y/N)");
 		JTextField jt20 = new JTextField((int) 1);
 
-		JButton jb1 = new JButton("CLICK WHEN FINISHED TO CALCULATE COLOR");
+		JButton jb1 = new JButton("                                         CALCULATE PERCENT                                         ");
 
-		panel.setPreferredSize(new Dimension(width / 3 + 50, 580));
+		panel.setPreferredSize(new Dimension(width / 3 + 50, 590));
 
 		panel.add(morning);
 
@@ -165,9 +165,13 @@ public class ColorZones extends Canvas {
 		jb1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (jb1.getModel().isEnabled()) {
-					double t = ys + ns;
-					double p = ys / t;
-					System.out.println(p);
+					t = ys + ns;
+					p = ys / t;
+					percent = String.valueOf(p * 20);
+					
+					JLabel jl21 = new JLabel("PERCENT: " + percent + "%");
+					panel.add(jl21);
+					panel.setPreferredSize(new Dimension(width / 3 + 50, 591));
 				}
 			}
 		});
