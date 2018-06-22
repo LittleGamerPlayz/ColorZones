@@ -96,7 +96,7 @@ public class ColorZones extends Canvas {
 		panel.setPreferredSize(new Dimension(width / 3 + 50, 600));
 
 		panel.setBackground(Color.LIGHT_GRAY);
-		
+
 		panel.add(morning);
 
 		panel.add(jl1);
@@ -168,12 +168,12 @@ public class ColorZones extends Canvas {
 				if (jb1.getModel().isEnabled()) {
 					double t = ys + ns;
 					double p = ys / t;
-					String percent = String.valueOf(p * 20);
-					
+					String percent = String.valueOf(p * 10 * 10);
+
 					JLabel jl21 = new JLabel("PERCENT: " + percent + "%");
 					panel.add(jl21);
-					
-					frame.setSize(width / 3 + 50, 640);
+
+					frame.setSize(width / 3 + 50, 635);
 				}
 			}
 		});
