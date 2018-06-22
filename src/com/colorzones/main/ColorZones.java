@@ -1,7 +1,9 @@
 package com.colorzones.main;
 
 import java.awt.Canvas;
+import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.FlowLayout;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -20,12 +22,9 @@ public class ColorZones extends Canvas {
 	public static int ys;
 	public static int ns;
 	public static int ss;
-	public static double t;
-	public static double p;
-	public static String percent;
 
 	public static void main(String[] args) {
-		JPanel panel = new JPanel();
+		JPanel panel = new JPanel(new FlowLayout());
 		JFrame frame = new JFrame();
 
 		JLabel morning = new JLabel("======== MORNING (8am - 4pm) ========");
@@ -94,8 +93,10 @@ public class ColorZones extends Canvas {
 
 		JButton jb1 = new JButton("                                         CALCULATE PERCENT                                         ");
 
-		panel.setPreferredSize(new Dimension(width / 3 + 50, 590));
+		panel.setPreferredSize(new Dimension(width / 3 + 50, 600));
 
+		panel.setBackground(Color.LIGHT_GRAY);
+		
 		panel.add(morning);
 
 		panel.add(jl1);
@@ -165,13 +166,14 @@ public class ColorZones extends Canvas {
 		jb1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (jb1.getModel().isEnabled()) {
-					t = ys + ns;
-					p = ys / t;
-					percent = String.valueOf(p * 20);
+					double t = ys + ns;
+					double p = ys / t;
+					String percent = String.valueOf(p * 20);
 					
 					JLabel jl21 = new JLabel("PERCENT: " + percent + "%");
 					panel.add(jl21);
-					panel.setPreferredSize(new Dimension(width / 3 + 50, 591));
+					
+					frame.setSize(width / 3 + 50, 640);
 				}
 			}
 		});
@@ -537,7 +539,7 @@ public class ColorZones extends Canvas {
 		});
 
 		frame.getContentPane().add(panel);
-		frame.pack();
+		frame.setSize(width / 3 + 50, 620);
 		frame.setTitle("Color Zones");
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setResizable(false);
