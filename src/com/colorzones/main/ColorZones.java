@@ -26,6 +26,11 @@ public class ColorZones extends Canvas {
 	public static void main(String[] args) {
 		JPanel panel = new JPanel(new FlowLayout());
 		JFrame frame = new JFrame();
+		
+		JLabel name = new JLabel("NAME: ");
+		JTextField name2 = new JTextField(10);
+		JLabel date = new JLabel("   DATE: ");
+		JTextField date2 = new JTextField(10);
 
 		JLabel morning = new JLabel("======== MORNING (8am - 4pm) ========");
 
@@ -92,11 +97,15 @@ public class ColorZones extends Canvas {
 		JTextField jt20 = new JTextField((int) 1);
 
 		JButton jb1 = new JButton("                                         CALCULATE PERCENT                                         ");
-
-		panel.setPreferredSize(new Dimension(width / 3 + 50, 600));
-
+		
 		panel.setBackground(Color.LIGHT_GRAY);
 
+		panel.add(name);
+		panel.add(name2);
+	
+		panel.add(date);
+		panel.add(date2);
+		
 		panel.add(morning);
 
 		panel.add(jl1);
@@ -173,7 +182,7 @@ public class ColorZones extends Canvas {
 					JLabel jl21 = new JLabel("PERCENT: " + percent + "%");
 					panel.add(jl21);
 
-					frame.setSize(width / 3 + 50, 635);
+					frame.setSize(width / 3 + 50, 655);
 				}
 			}
 		});
@@ -539,7 +548,7 @@ public class ColorZones extends Canvas {
 		});
 
 		frame.getContentPane().add(panel);
-		frame.setSize(width / 3 + 50, 620);
+		frame.setSize(width / 3 + 50, 635);
 		frame.setTitle("Color Zones");
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setResizable(false);
