@@ -23,11 +23,12 @@ public class ColorZones extends Canvas {
 	private static int ss;
 	private static final JLabel[] jl = new JLabel[20];
 	private static final JTextField[] jt = new JTextField[20];
-	private static final String[] input = new String[20];
+	public static final String[] input = new String[20];
 
 	public static void main(String[] args) {
 		JPanel panel = new JPanel(new FlowLayout());
 		JFrame frame = new JFrame();
+		final String[] input = new String[20];
 
 		JLabel labelName = new JLabel("NAME: ");
 		JTextField textName = new JTextField(10);
@@ -36,8 +37,7 @@ public class ColorZones extends Canvas {
 
 		JLabel morning = new JLabel("======== MORNING (8am - 4pm) ========");
 		JLabel afternoon = new JLabel("======== AFTERNOON (4pm - 12am) ========");
-		JButton jb = new JButton(
-				"                                         CALCULATE PERCENT                                         ");
+		JButton jb = new JButton("                                         CALCULATE PERCENT                                         ");
 
 		jl[0] = new JLabel("Did you behave well during the overnight? (Y/N)");
 		jl[1] = new JLabel("Did you wake up on time and get on transportation? (Y/N)");
@@ -100,25 +100,366 @@ public class ColorZones extends Canvas {
 				}
 			}
 		});
-		for (int i = 0; i <= jt.length - 1; i++) {
-			jt[i].addActionListener(new ActionListener() {
-				public void actionPerformed(ActionEvent e) {
-					input[i] = jt[i].getText();
-					if (input[i].equals("Y")) {
-						ys++;
-						System.out.println("YS: " + ys);
-					}
-					if (input[i].equals("N")) {
-						ns++;
-						System.out.println("NS: " + ns);
-					}
-					if (input[i].equals("/")) {
-						ss++;
-						System.out.println("SS: " + ss);
-					}
+
+		jt[0].addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				input[0] = jt[0].getText();
+				if (input[0].equals("Y")) {
+					ys++;
+					System.out.println("YS: " + ys);
 				}
-			});
-		}
+				if (input[0].equals("N")) {
+					ns++;
+					System.out.println("NS: " + ns);
+				}
+				if (input[0].equals("/")) {
+					ss++;
+					System.out.println("SS: " + ss);
+				}
+			}
+		});
+
+		jt[1].addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				input[1] = jt[1].getText();
+				if (input[1].equals("Y")) {
+					ys++;
+					System.out.println("YS: " + ys);
+				}
+				if (input[1].equals("N")) {
+					ns++;
+					System.out.println("NS: " + ns);
+				}
+				if (input[1].equals("/")) {
+					ss++;
+					System.out.println("SS: " + ss);
+				}
+			}
+		});
+
+		jt[2].addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				input[2] = jt[2].getText();
+				if (input[2].equals("Y")) {
+					ys++;
+					System.out.println("YS: " + ys);
+				}
+				if (input[2].equals("N")) {
+					ns++;
+					System.out.println("NS: " + ns);
+				}
+				if (input[2].equals("/")) {
+					ss++;
+					System.out.println("SS: " + ss);
+				}
+			}
+		});
+
+		jt[3].addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				input[3] = jt[3].getText();
+				if (input[3].equals("Y")) {
+					ys++;
+					System.out.println("YS: " + ys);
+				}
+				if (input[3].equals("N")) {
+					ns++;
+					System.out.println("NS: " + ns);
+				}
+				if (input[3].equals("/")) {
+					ss++;
+					System.out.println("SS: " + ss);
+				}
+			}
+		});
+
+		jt[4].addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				input[4] = jt[4].getText();
+				if (input[4].equals("Y")) {
+					ys++;
+					System.out.println("YS: " + ys);
+				}
+				if (input[4].equals("N")) {
+					ns++;
+					System.out.println("NS: " + ns);
+				}
+				if (input[4].equals("/")) {
+					ss++;
+					System.out.println("SS: " + ss);
+				}
+			}
+		});
+
+		jt[5].addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				input[5] = jt[5].getText();
+				if (input[5].equals("Y")) {
+					ys++;
+					System.out.println("YS: " + ys);
+				}
+				if (input[5].equals("N")) {
+					ns++;
+					System.out.println("NS: " + ns);
+				}
+				if (input[5].equals("/")) {
+					ss++;
+					System.out.println("SS: " + ss);
+				}
+			}
+		});
+
+		jt[6].addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				input[6] = jt[6].getText();
+				if (input[6].equals("Y")) {
+					ys++;
+					System.out.println("YS: " + ys);
+				}
+				if (input[6].equals("N")) {
+					ns++;
+					System.out.println("NS: " + ns);
+				}
+				if (input[6].equals("/")) {
+					ss++;
+					System.out.println("SS: " + ss);
+				}
+			}
+		});
+
+		jt[7].addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				input[7] = jt[7].getText();
+				if (input[7].equals("Y")) {
+					ys++;
+					System.out.println("YS: " + ys);
+				}
+				if (input[7].equals("N")) {
+					ns++;
+					System.out.println("NS: " + ns);
+				}
+				if (input[7].equals("/")) {
+					ss++;
+					System.out.println("SS: " + ss);
+				}
+			}
+		});
+
+		jt[8].addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				input[8] = jt[8].getText();
+				if (input[8].equals("Y")) {
+					ys++;
+					System.out.println("YS: " + ys);
+				}
+				if (input[8].equals("N")) {
+					ns++;
+					System.out.println("NS: " + ns);
+				}
+				if (input[8].equals("/")) {
+					ss++;
+					System.out.println("SS: " + ss);
+				}
+			}
+		});
+
+		jt[9].addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				input[9] = jt[9].getText();
+				if (input[9].equals("Y")) {
+					ys++;
+					System.out.println("YS: " + ys);
+				}
+				if (input[9].equals("N")) {
+					ns++;
+					System.out.println("NS: " + ns);
+				}
+				if (input[9].equals("/")) {
+					ss++;
+					System.out.println("SS: " + ss);
+				}
+			}
+		});
+
+		jt[10].addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				input[10] = jt[10].getText();
+				if (input[10].equals("Y")) {
+					ys++;
+					System.out.println("YS: " + ys);
+				}
+				if (input[10].equals("N")) {
+					ns++;
+					System.out.println("NS: " + ns);
+				}
+				if (input[10].equals("/")) {
+					ss++;
+					System.out.println("SS: " + ss);
+				}
+			}
+		});
+
+		jt[11].addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				input[11] = jt[11].getText();
+				if (input[11].equals("Y")) {
+					ys++;
+					System.out.println("YS: " + ys);
+				}
+				if (input[11].equals("N")) {
+					ns++;
+					System.out.println("NS: " + ns);
+				}
+				if (input[11].equals("/")) {
+					ss++;
+					System.out.println("SS: " + ss);
+				}
+			}
+		});
+
+		jt[12].addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				input[12] = jt[12].getText();
+				if (input[12].equals("Y")) {
+					ys++;
+					System.out.println("YS: " + ys);
+				}
+				if (input[12].equals("N")) {
+					ns++;
+					System.out.println("NS: " + ns);
+				}
+				if (input[12].equals("/")) {
+					ss++;
+					System.out.println("SS: " + ss);
+				}
+			}
+		});
+
+		jt[13].addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				input[13] = jt[13].getText();
+				if (input[13].equals("Y")) {
+					ys++;
+					System.out.println("YS: " + ys);
+				}
+				if (input[13].equals("N")) {
+					ns++;
+					System.out.println("NS: " + ns);
+				}
+				if (input[13].equals("/")) {
+					ss++;
+					System.out.println("SS: " + ss);
+				}
+			}
+		});
+
+		jt[14].addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				input[14] = jt[14].getText();
+				if (input[14].equals("Y")) {
+					ys++;
+					System.out.println("YS: " + ys);
+				}
+				if (input[14].equals("N")) {
+					ns++;
+					System.out.println("NS: " + ns);
+				}
+				if (input[14].equals("/")) {
+					ss++;
+					System.out.println("SS: " + ss);
+				}
+			}
+		});
+
+		jt[15].addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				input[15] = jt[15].getText();
+				if (input[15].equals("Y")) {
+					ys++;
+					System.out.println("YS: " + ys);
+				}
+				if (input[15].equals("N")) {
+					ns++;
+					System.out.println("NS: " + ns);
+				}
+				if (input[15].equals("/")) {
+					ss++;
+					System.out.println("SS: " + ss);
+				}
+			}
+		});
+
+		jt[16].addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				input[16] = jt[16].getText();
+				if (input[16].equals("Y")) {
+					ys++;
+					System.out.println("YS: " + ys);
+				}
+				if (input[16].equals("N")) {
+					ns++;
+					System.out.println("NS: " + ns);
+				}
+				if (input[16].equals("/")) {
+					ss++;
+					System.out.println("SS: " + ss);
+				}
+			}
+		});
+
+		jt[17].addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				input[17] = jt[17].getText();
+				if (input[17].equals("Y")) {
+					ys++;
+					System.out.println("YS: " + ys);
+				}
+				if (input[17].equals("N")) {
+					ns++;
+					System.out.println("NS: " + ns);
+				}
+				if (input[17].equals("/")) {
+					ss++;
+					System.out.println("SS: " + ss);
+				}
+			}
+		});
+
+		jt[18].addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				input[18] = jt[18].getText();
+				if (input[18].equals("Y")) {
+					ys++;
+					System.out.println("YS: " + ys);
+				}
+				if (input[18].equals("N")) {
+					ns++;
+					System.out.println("NS: " + ns);
+				}
+				if (input[18].equals("/")) {
+					ss++;
+					System.out.println("SS: " + ss);
+				}
+			}
+		});
+
+		jt[19].addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				input[19] = jt[19].getText();
+				if (input[19].equals("Y")) {
+					ys++;
+					System.out.println("YS: " + ys);
+				}
+				if (input[19].equals("N")) {
+					ns++;
+					System.out.println("NS: " + ns);
+				}
+				if (input[19].equals("/")) {
+					ss++;
+					System.out.println("SS: " + ss);
+				}
+			}
+		});
 
 		frame.getContentPane().add(panel);
 		frame.setSize(width / 3 + 50, 635);
