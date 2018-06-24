@@ -43,7 +43,7 @@ public class ColorZones extends Canvas {
 		JLabel afternoon = new JLabel("======== AFTERNOON (4pm - 12am) ========");
 		JButton jb = new JButton("                                         CALCULATE PERCENT                                         ");
 
-		jl[0] = new JLabel("Did you behave well during the overnight? (Y/N)");
+		jl[0] = new JLabel("Did you behave well during the overnight?");
 		jl[1] = new JLabel("Did you wake up on time and get on transportation? (Y/N)");
 		jl[2] = new JLabel("Did you make your bed in the morning? (Y/N)");
 		jl[3] = new JLabel("Did you remain in school throughout the day? (Y/N)");
@@ -476,7 +476,7 @@ public class ColorZones extends Canvas {
 					}
 				}
 				
-				x.format("Did you behave well during the overnight? (Y/N): " + YesOrNo[0]);
+				x.format("Did you behave well during the overnight?: " + YesOrNo[0]);
 				
 				x.close();
 			}
