@@ -31,7 +31,7 @@ public class ColorZones extends Canvas {
 	private static JTextField textName = new JTextField(10);
 	private static JLabel labelDate = new JLabel("   DATE: ");
 	private static JTextField textDate = new JTextField(10);
-	
+
 	private static Formatter x;
 
 	public static void main(String[] args) throws InterruptedException {
@@ -44,25 +44,25 @@ public class ColorZones extends Canvas {
 		JButton jb = new JButton("                                         CALCULATE PERCENT                                         ");
 
 		jl[0] = new JLabel("Did you behave well during the overnight?");
-		jl[1] = new JLabel("Did you wake up on time and get on transportation? (Y/N)");
-		jl[2] = new JLabel("Did you make your bed in the morning? (Y/N)");
-		jl[3] = new JLabel("Did you remain in school throughout the day? (Y/N)");
-		jl[4] = new JLabel("Did you have appropriate boundries with peers and staff? (Y/N)");
-		jl[5] = new JLabel("Did you have appropriate language with peers and staff? (Y/N)");
-		jl[6] = new JLabel("Did you do anything extra around the house? (Y/N)");
-		jl[7] = new JLabel("Did you follow staff prompts and program rules? (Y/N)");
-		jl[8] = new JLabel("Are your belongings orginized? (Y/N)");
-		jl[9] = new JLabel("Did you work on any of your PAYA skills? (Y/N)");
-		jl[10] = new JLabel("Did you do well in tutoring or group? (Y/N)");
-		jl[11] = new JLabel("Did you have an appropriate dinner time routine? (Y/N)");
-		jl[12] = new JLabel("Did you do well while out in public if an offground activity occured? (Y/N)");
-		jl[13] = new JLabel("Did you handle tranitions/bed prep well tonight? (Y/N)");
-		jl[14] = new JLabel("Did you have appropriate boundries with peers and staff? (Y/N)");
-		jl[15] = new JLabel("Did you have appropriate language with peers and staff? (Y/N)");
-		jl[16] = new JLabel("Did you follow staff prompts and program rules througout the shift? (Y/N)");
-		jl[17] = new JLabel("Did you do your after dinner chore? (Y/N)");
-		jl[18] = new JLabel("Did you show any positive leadership or role model behaviors? (Y/N)");
-		jl[19] = new JLabel("Did you work on any of your PAYA skills? (Y/N)");
+		jl[1] = new JLabel("Did you wake up on time and get on transportation?");
+		jl[2] = new JLabel("Did you make your bed in the morning?");
+		jl[3] = new JLabel("Did you remain in school throughout the day?");
+		jl[4] = new JLabel("Did you have appropriate boundries with peers and staff?");
+		jl[5] = new JLabel("Did you have appropriate language with peers and staff?");
+		jl[6] = new JLabel("Did you do anything extra around the house?");
+		jl[7] = new JLabel("Did you follow staff prompts and program rules?");
+		jl[8] = new JLabel("Are your belongings orginized?");
+		jl[9] = new JLabel("Did you work on any of your PAYA skills?");
+		jl[10] = new JLabel("Did you do well in tutoring or group?");
+		jl[11] = new JLabel("Did you have an appropriate dinner time routine?");
+		jl[12] = new JLabel("Did you do well while out in public if an offground activity occured?");
+		jl[13] = new JLabel("Did you handle tranitions/bed prep well tonight?");
+		jl[14] = new JLabel("Did you have appropriate boundries with peers and staff?");
+		jl[15] = new JLabel("Did you have appropriate language with peers and staff?");
+		jl[16] = new JLabel("Did you follow staff prompts and program rules througout the shift?");
+		jl[17] = new JLabel("Did you do your after dinner chore?");
+		jl[18] = new JLabel("Did you show any positive leadership or role model behaviors?");
+		jl[19] = new JLabel("Did you work on any of your PAYA skills?");
 
 		for (int i = 0; i <= jt.length - 1; i++) {
 			jt[i] = new JTextField(1);
@@ -117,14 +117,17 @@ public class ColorZones extends Canvas {
 				if (input[1].equals("Y")) {
 					ys++;
 					System.out.println("YS: " + ys);
+					YesOrNo[1] = "Y";
 				}
 				if (input[1].equals("N")) {
 					ns++;
 					System.out.println("NS: " + ns);
+					YesOrNo[1] = "N";
 				}
 				if (input[1].equals("/")) {
 					ss++;
 					System.out.println("SS: " + ss);
+					YesOrNo[1] = "/";
 				}
 			}
 		});
@@ -135,14 +138,17 @@ public class ColorZones extends Canvas {
 				if (input[2].equals("Y")) {
 					ys++;
 					System.out.println("YS: " + ys);
+					YesOrNo[2] = "Y";
 				}
 				if (input[2].equals("N")) {
 					ns++;
 					System.out.println("NS: " + ns);
+					YesOrNo[2] = "N";
 				}
 				if (input[2].equals("/")) {
 					ss++;
 					System.out.println("SS: " + ss);
+					YesOrNo[2] = "/";
 				}
 			}
 		});
@@ -153,14 +159,17 @@ public class ColorZones extends Canvas {
 				if (input[3].equals("Y")) {
 					ys++;
 					System.out.println("YS: " + ys);
+					YesOrNo[3] = "Y";
 				}
 				if (input[3].equals("N")) {
 					ns++;
 					System.out.println("NS: " + ns);
+					YesOrNo[3] = "N";
 				}
 				if (input[3].equals("/")) {
 					ss++;
 					System.out.println("SS: " + ss);
+					YesOrNo[3] = "/";
 				}
 			}
 		});
@@ -171,6 +180,7 @@ public class ColorZones extends Canvas {
 				if (input[4].equals("Y")) {
 					ys++;
 					System.out.println("YS: " + ys);
+					YesOrNo[4] = "Y ";
 				}
 				if (input[4].equals("N")) {
 					ns++;
@@ -452,7 +462,7 @@ public class ColorZones extends Canvas {
 				}
 			}
 		});
-		
+
 		jb.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (jb.getModel().isEnabled()) {
@@ -464,10 +474,10 @@ public class ColorZones extends Canvas {
 					panel.add(jl21);
 
 					frame.setSize(width / 3 + 50, 655);
-					
+
 					String dateInput = textDate.getText();
 					String nameInput = textName.getText();
-					
+
 					try {
 						x = new Formatter(nameInput.toUpperCase() + "'S YES OR NO SHEET " + dateInput + ".txt");
 						System.out.println("You created a file!");
@@ -475,9 +485,9 @@ public class ColorZones extends Canvas {
 						System.out.println("Error detected!");
 					}
 				}
-				
+
 				x.format("Did you behave well during the overnight?: " + YesOrNo[0]);
-				
+				x.format("Did you wake up on time and get on transportation?: " + YesOrNo[1]);
 				x.close();
 			}
 		});
@@ -489,6 +499,6 @@ public class ColorZones extends Canvas {
 		frame.setResizable(false);
 		frame.setLocationRelativeTo(null);
 		frame.setVisible(true);
-		
+
 	}
 }
