@@ -6,6 +6,7 @@ import java.awt.FlowLayout;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Formatter;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -24,16 +25,19 @@ public class ColorZones extends Canvas {
 	private static final JLabel[] jl = new JLabel[20];
 	private static final JTextField[] jt = new JTextField[20];
 	public static final String[] input = new String[20];
+	public static String[] YesOrNo = new String[20];
 
-	public static void main(String[] args) {
+	private static JLabel labelName = new JLabel("NAME: ");
+	private static JTextField textName = new JTextField(10);
+	private static JLabel labelDate = new JLabel("   DATE: ");
+	private static JTextField textDate = new JTextField(10);
+	
+	private static Formatter x;
+
+	public static void main(String[] args) throws InterruptedException {
 		JPanel panel = new JPanel(new FlowLayout());
 		JFrame frame = new JFrame();
 		final String[] input = new String[20];
-
-		JLabel labelName = new JLabel("NAME: ");
-		JTextField textName = new JTextField(10);
-		JLabel labelDate = new JLabel("   DATE: ");
-		JTextField textDate = new JTextField(10);
 
 		JLabel morning = new JLabel("======== MORNING (8am - 4pm) ========");
 		JLabel afternoon = new JLabel("======== AFTERNOON (4pm - 12am) ========");
@@ -86,35 +90,23 @@ public class ColorZones extends Canvas {
 
 		panel.add(jb);
 
-		jb.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				if (jb.getModel().isEnabled()) {
-					double t = ys + ns;
-					double p = ys / t;
-					String percent = String.valueOf(p * 10 * 10);
-
-					JLabel jl21 = new JLabel("PERCENT: " + percent + "%");
-					panel.add(jl21);
-
-					frame.setSize(width / 3 + 50, 655);
-				}
-			}
-		});
-
 		jt[0].addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				input[0] = jt[0].getText();
 				if (input[0].equals("Y")) {
 					ys++;
 					System.out.println("YS: " + ys);
+					YesOrNo[0] = "Y";
 				}
 				if (input[0].equals("N")) {
 					ns++;
 					System.out.println("NS: " + ns);
+					YesOrNo[0] = "N";
 				}
 				if (input[0].equals("/")) {
 					ss++;
 					System.out.println("SS: " + ss);
+					YesOrNo[0] = "/";
 				}
 			}
 		});
@@ -460,6 +452,35 @@ public class ColorZones extends Canvas {
 				}
 			}
 		});
+		
+		jb.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if (jb.getModel().isEnabled()) {
+					double t = ys + ns;
+					double p = ys / t;
+					String percent = String.valueOf(p * 10 * 10);
+
+					JLabel jl21 = new JLabel("PERCENT: " + percent + "%");
+					panel.add(jl21);
+
+					frame.setSize(width / 3 + 50, 655);
+					
+					String dateInput = textDate.getText();
+					String nameInput = textName.getText();
+					
+					try {
+						x = new Formatter(nameInput.toUpperCase() + "'S YES OR NO SHEET " + dateInput + ".txt");
+						System.out.println("You created a file!");
+					} catch (Exception e1) {
+						System.out.println("Error detected!");
+					}
+				}
+				
+				x.format("Did you behave well during the overnight? (Y/N): " + YesOrNo[0]);
+				
+				x.close();
+			}
+		});
 
 		frame.getContentPane().add(panel);
 		frame.setSize(width / 3 + 50, 635);
@@ -468,5 +489,6 @@ public class ColorZones extends Canvas {
 		frame.setResizable(false);
 		frame.setLocationRelativeTo(null);
 		frame.setVisible(true);
+		
 	}
 }
