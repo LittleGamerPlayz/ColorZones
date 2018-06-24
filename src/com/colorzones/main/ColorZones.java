@@ -30,9 +30,10 @@ public class ColorZones extends Canvas {
 	private static JLabel labelName = new JLabel("NAME: ");
 	private static JTextField textName = new JTextField(10);
 	private static JLabel labelDate = new JLabel("   DATE: ");
-	private static JTextField textDate = new JTextField(10);
+	private static JTextField textDate = new JTextField("USE -'s!", 10);
 
 	private static Formatter x;
+	static String percent;
 
 	public static void main(String[] args) throws InterruptedException {
 		JPanel panel = new JPanel(new FlowLayout());
@@ -51,7 +52,7 @@ public class ColorZones extends Canvas {
 		jl[5] = new JLabel("Did you have appropriate language with peers and staff?");
 		jl[6] = new JLabel("Did you do anything extra around the house?");
 		jl[7] = new JLabel("Did you follow staff prompts and program rules?");
-		jl[8] = new JLabel("Are your belongings orginized?");
+		jl[8] = new JLabel("Are your personal belongings orginized?");
 		jl[9] = new JLabel("Did you work on any of your PAYA skills?");
 		jl[10] = new JLabel("Did you do well in tutoring or group?");
 		jl[11] = new JLabel("Did you have an appropriate dinner time routine?");
@@ -89,10 +90,11 @@ public class ColorZones extends Canvas {
 		}
 
 		panel.add(jb);
-
+		
 		jt[0].addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				input[0] = jt[0].getText();
+				jt[0].setEnabled(false);
 				if (input[0].equals("Y")) {
 					ys++;
 					System.out.println("YS: " + ys);
@@ -114,6 +116,7 @@ public class ColorZones extends Canvas {
 		jt[1].addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				input[1] = jt[1].getText();
+				jt[1].setEnabled(false);
 				if (input[1].equals("Y")) {
 					ys++;
 					System.out.println("YS: " + ys);
@@ -135,6 +138,7 @@ public class ColorZones extends Canvas {
 		jt[2].addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				input[2] = jt[2].getText();
+				jt[2].setEnabled(false);
 				if (input[2].equals("Y")) {
 					ys++;
 					System.out.println("YS: " + ys);
@@ -156,6 +160,7 @@ public class ColorZones extends Canvas {
 		jt[3].addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				input[3] = jt[3].getText();
+				jt[3].setEnabled(false);
 				if (input[3].equals("Y")) {
 					ys++;
 					System.out.println("YS: " + ys);
@@ -177,18 +182,21 @@ public class ColorZones extends Canvas {
 		jt[4].addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				input[4] = jt[4].getText();
+				jt[4].setEnabled(false);
 				if (input[4].equals("Y")) {
 					ys++;
 					System.out.println("YS: " + ys);
-					YesOrNo[4] = "Y ";
+					YesOrNo[4] = "Y";
 				}
 				if (input[4].equals("N")) {
 					ns++;
 					System.out.println("NS: " + ns);
+					YesOrNo[4] = "N";
 				}
 				if (input[4].equals("/")) {
 					ss++;
 					System.out.println("SS: " + ss);
+					YesOrNo[4] = "/";
 				}
 			}
 		});
@@ -196,17 +204,21 @@ public class ColorZones extends Canvas {
 		jt[5].addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				input[5] = jt[5].getText();
+				jt[5].setEnabled(false);
 				if (input[5].equals("Y")) {
 					ys++;
 					System.out.println("YS: " + ys);
+					YesOrNo[5] = "Y";
 				}
 				if (input[5].equals("N")) {
 					ns++;
 					System.out.println("NS: " + ns);
+					YesOrNo[5] = "N";
 				}
 				if (input[5].equals("/")) {
 					ss++;
 					System.out.println("SS: " + ss);
+					YesOrNo[5] = "/";
 				}
 			}
 		});
@@ -214,17 +226,21 @@ public class ColorZones extends Canvas {
 		jt[6].addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				input[6] = jt[6].getText();
+				jt[6].setEnabled(false);
 				if (input[6].equals("Y")) {
 					ys++;
 					System.out.println("YS: " + ys);
+					YesOrNo[6] = "Y";
 				}
 				if (input[6].equals("N")) {
 					ns++;
 					System.out.println("NS: " + ns);
+					YesOrNo[6] = "N";
 				}
 				if (input[6].equals("/")) {
 					ss++;
 					System.out.println("SS: " + ss);
+					YesOrNo[6] = "/";
 				}
 			}
 		});
@@ -232,17 +248,21 @@ public class ColorZones extends Canvas {
 		jt[7].addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				input[7] = jt[7].getText();
+				jt[7].setEnabled(false);
 				if (input[7].equals("Y")) {
 					ys++;
 					System.out.println("YS: " + ys);
+					YesOrNo[7] = "Y";
 				}
 				if (input[7].equals("N")) {
 					ns++;
 					System.out.println("NS: " + ns);
+					YesOrNo[7] = "N";
 				}
 				if (input[7].equals("/")) {
 					ss++;
 					System.out.println("SS: " + ss);
+					YesOrNo[7] = "/";
 				}
 			}
 		});
@@ -250,17 +270,21 @@ public class ColorZones extends Canvas {
 		jt[8].addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				input[8] = jt[8].getText();
+				jt[8].setEnabled(false);
 				if (input[8].equals("Y")) {
 					ys++;
 					System.out.println("YS: " + ys);
+					YesOrNo[8] = "Y";
 				}
 				if (input[8].equals("N")) {
 					ns++;
 					System.out.println("NS: " + ns);
+					YesOrNo[8] = "N";
 				}
 				if (input[8].equals("/")) {
 					ss++;
 					System.out.println("SS: " + ss);
+					YesOrNo[8] = "/";
 				}
 			}
 		});
@@ -268,17 +292,21 @@ public class ColorZones extends Canvas {
 		jt[9].addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				input[9] = jt[9].getText();
+				jt[9].setEnabled(false);
 				if (input[9].equals("Y")) {
 					ys++;
 					System.out.println("YS: " + ys);
+					YesOrNo[9] = "Y";
 				}
 				if (input[9].equals("N")) {
 					ns++;
 					System.out.println("NS: " + ns);
+					YesOrNo[9] = "N";
 				}
 				if (input[9].equals("/")) {
 					ss++;
 					System.out.println("SS: " + ss);
+					YesOrNo[9] = "/";
 				}
 			}
 		});
@@ -286,17 +314,21 @@ public class ColorZones extends Canvas {
 		jt[10].addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				input[10] = jt[10].getText();
+				jt[10].setEnabled(false);
 				if (input[10].equals("Y")) {
 					ys++;
 					System.out.println("YS: " + ys);
+					YesOrNo[10] = "Y";
 				}
 				if (input[10].equals("N")) {
 					ns++;
 					System.out.println("NS: " + ns);
+					YesOrNo[10] = "N";
 				}
 				if (input[10].equals("/")) {
 					ss++;
 					System.out.println("SS: " + ss);
+					YesOrNo[10] = "/";
 				}
 			}
 		});
@@ -304,17 +336,21 @@ public class ColorZones extends Canvas {
 		jt[11].addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				input[11] = jt[11].getText();
+				jt[11].setEnabled(false);
 				if (input[11].equals("Y")) {
 					ys++;
 					System.out.println("YS: " + ys);
+					YesOrNo[11] = "Y";
 				}
 				if (input[11].equals("N")) {
 					ns++;
 					System.out.println("NS: " + ns);
+					YesOrNo[11] = "N";
 				}
 				if (input[11].equals("/")) {
 					ss++;
 					System.out.println("SS: " + ss);
+					YesOrNo[11] = "/";
 				}
 			}
 		});
@@ -322,17 +358,21 @@ public class ColorZones extends Canvas {
 		jt[12].addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				input[12] = jt[12].getText();
+				jt[12].setEnabled(false);
 				if (input[12].equals("Y")) {
 					ys++;
 					System.out.println("YS: " + ys);
+					YesOrNo[12] = "Y";
 				}
 				if (input[12].equals("N")) {
 					ns++;
 					System.out.println("NS: " + ns);
+					YesOrNo[12] = "N";
 				}
 				if (input[12].equals("/")) {
 					ss++;
 					System.out.println("SS: " + ss);
+					YesOrNo[12] = "/";
 				}
 			}
 		});
@@ -340,17 +380,21 @@ public class ColorZones extends Canvas {
 		jt[13].addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				input[13] = jt[13].getText();
+				jt[13].setEnabled(false);
 				if (input[13].equals("Y")) {
 					ys++;
 					System.out.println("YS: " + ys);
+					YesOrNo[13] = "Y";
 				}
 				if (input[13].equals("N")) {
 					ns++;
 					System.out.println("NS: " + ns);
+					YesOrNo[13] = "N";
 				}
 				if (input[13].equals("/")) {
 					ss++;
 					System.out.println("SS: " + ss);
+					YesOrNo[13] = "/";
 				}
 			}
 		});
@@ -358,17 +402,21 @@ public class ColorZones extends Canvas {
 		jt[14].addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				input[14] = jt[14].getText();
+				jt[14].setEnabled(false);
 				if (input[14].equals("Y")) {
 					ys++;
 					System.out.println("YS: " + ys);
+					YesOrNo[14] = "Y";
 				}
 				if (input[14].equals("N")) {
 					ns++;
 					System.out.println("NS: " + ns);
+					YesOrNo[14] = "N";
 				}
 				if (input[14].equals("/")) {
 					ss++;
 					System.out.println("SS: " + ss);
+					YesOrNo[14] = "/";
 				}
 			}
 		});
@@ -376,17 +424,21 @@ public class ColorZones extends Canvas {
 		jt[15].addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				input[15] = jt[15].getText();
+				jt[15].setEnabled(false);
 				if (input[15].equals("Y")) {
 					ys++;
 					System.out.println("YS: " + ys);
+					YesOrNo[15] = "Y";
 				}
 				if (input[15].equals("N")) {
 					ns++;
 					System.out.println("NS: " + ns);
+					YesOrNo[15] = "N";
 				}
 				if (input[15].equals("/")) {
 					ss++;
 					System.out.println("SS: " + ss);
+					YesOrNo[15] = "/";
 				}
 			}
 		});
@@ -394,17 +446,21 @@ public class ColorZones extends Canvas {
 		jt[16].addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				input[16] = jt[16].getText();
+				jt[16].setEnabled(false);
 				if (input[16].equals("Y")) {
 					ys++;
 					System.out.println("YS: " + ys);
+					YesOrNo[16] = "Y";
 				}
 				if (input[16].equals("N")) {
 					ns++;
 					System.out.println("NS: " + ns);
+					YesOrNo[16] = "N";
 				}
 				if (input[16].equals("/")) {
 					ss++;
 					System.out.println("SS: " + ss);
+					YesOrNo[16] = "/";
 				}
 			}
 		});
@@ -412,17 +468,21 @@ public class ColorZones extends Canvas {
 		jt[17].addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				input[17] = jt[17].getText();
+				jt[17].setEnabled(false);
 				if (input[17].equals("Y")) {
 					ys++;
 					System.out.println("YS: " + ys);
+					YesOrNo[17] = "Y";
 				}
 				if (input[17].equals("N")) {
 					ns++;
 					System.out.println("NS: " + ns);
+					YesOrNo[17] = "N";
 				}
 				if (input[17].equals("/")) {
 					ss++;
 					System.out.println("SS: " + ss);
+					YesOrNo[17] = "/";
 				}
 			}
 		});
@@ -430,17 +490,21 @@ public class ColorZones extends Canvas {
 		jt[18].addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				input[18] = jt[18].getText();
+				jt[18].setEnabled(false);
 				if (input[18].equals("Y")) {
 					ys++;
 					System.out.println("YS: " + ys);
+					YesOrNo[18] = "Y";
 				}
 				if (input[18].equals("N")) {
 					ns++;
 					System.out.println("NS: " + ns);
+					YesOrNo[18] = "N";
 				}
 				if (input[18].equals("/")) {
 					ss++;
 					System.out.println("SS: " + ss);
+					YesOrNo[18] = "/";
 				}
 			}
 		});
@@ -448,17 +512,21 @@ public class ColorZones extends Canvas {
 		jt[19].addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				input[19] = jt[19].getText();
+				jt[19].setEnabled(false);
 				if (input[19].equals("Y")) {
 					ys++;
 					System.out.println("YS: " + ys);
+					YesOrNo[19] = "Y";
 				}
 				if (input[19].equals("N")) {
 					ns++;
 					System.out.println("NS: " + ns);
+					YesOrNo[19] = "N";
 				}
 				if (input[19].equals("/")) {
 					ss++;
 					System.out.println("SS: " + ss);
+					YesOrNo[19] = "/";
 				}
 			}
 		});
@@ -466,9 +534,10 @@ public class ColorZones extends Canvas {
 		jb.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (jb.getModel().isEnabled()) {
+					jb.setEnabled(false);
 					double t = ys + ns;
 					double p = ys / t;
-					String percent = String.valueOf(p * 10 * 10);
+					percent = String.valueOf(p * 10 * 10);
 
 					JLabel jl21 = new JLabel("PERCENT: " + percent + "%");
 					panel.add(jl21);
@@ -486,8 +555,29 @@ public class ColorZones extends Canvas {
 					}
 				}
 
-				x.format("Did you behave well during the overnight?: " + YesOrNo[0]);
-				x.format("Did you wake up on time and get on transportation?: " + YesOrNo[1]);
+				x.format("======== MORNING (8am - 4pm) ======== ");
+				x.format("Did you behave well during the overnight?: " + YesOrNo[0] + " ");
+				x.format("Did you wake up on time and get on transportation?: " + YesOrNo[1] + " ");
+				x.format("Did you make your bed in the morning?: " + YesOrNo[2] + " ");
+				x.format("Did you remain in school throughout the day?: " + YesOrNo[3] + " ");
+				x.format("Did you have appropriate boundries with peers and staff?: " + YesOrNo[4] + " ");
+				x.format("Did you have appropriate language with peers and staff?: " + YesOrNo[5] + " ");
+				x.format("Did you do anything extra around the house?: " + YesOrNo[6] + " ");
+				x.format("Did you follow staff prompts and program rules?: " + YesOrNo[7] + " ");
+				x.format("Are your personal belongings orginized?: " + YesOrNo[8] + " ");
+				x.format("Did you work on any of your PAYA skills?: " + YesOrNo[9] + " ");
+				x.format("======== AFTERNOON (4pm - 12am) ======== ");
+				x.format("Did you do well in tutoring or group?: " + YesOrNo[10] + " ");
+				x.format("Did you have an appropriate dinner time routine?: " + YesOrNo[11] + " ");
+				x.format("Did you do well while out in public if an offground activity occured?: " + YesOrNo[12] + " ");
+				x.format("Did you handle tranitions/bed prep well tonight?: " + YesOrNo[13] + " ");
+				x.format("Did you have appropriate boundries with peers and staff?: " + YesOrNo[14] + " ");
+				x.format("Did you have appropriate language with peers and staff?: " + YesOrNo[15] + " ");
+				x.format("Did you follow staff prompts and program rules througout the shift?: " + YesOrNo[16] + " ");
+				x.format("Did you do your after dinner chore?: " + YesOrNo[17] + " ");
+				x.format("Did you show any positive leadership or role model behaviors?: " + YesOrNo[18] + " ");
+				x.format("Did you work on any of your PAYA skills?: " + YesOrNo[19] + " ");
+				x.format("PERCENT: " + percent);
 				x.close();
 			}
 		});
