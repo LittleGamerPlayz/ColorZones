@@ -554,7 +554,7 @@ public class ColorZones extends Canvas {
 					}
 				}
 
-				x.format("======== MORNING (8am - 4pm) ======== ");
+				x.format("MORNING (8am - 4pm) ");
 				x.format("Did you behave well during the overnight?: " + YesOrNo[0] + " ");
 				x.format("Did you wake up on time and get on transportation?: " + YesOrNo[1] + " ");
 				x.format("Did you make your bed in the morning?: " + YesOrNo[2] + " ");
@@ -565,7 +565,7 @@ public class ColorZones extends Canvas {
 				x.format("Did you follow staff prompts and program rules?: " + YesOrNo[7] + " ");
 				x.format("Are your personal belongings organized?: " + YesOrNo[8] + " ");
 				x.format("Did you work on any of your PAYA skills?: " + YesOrNo[9] + " ");
-				x.format("======== AFTERNOON (4pm - 12am) ======== ");
+				x.format("AFTERNOON (4pm - 12am) ");
 				x.format("Did you do well in tutoring or group?: " + YesOrNo[10] + " ");
 				x.format("Did you have an appropriate dinner time routine?: " + YesOrNo[11] + " ");
 				x.format("Did you do well while out in public if an off ground activity occurred?: " + YesOrNo[12] + " ");
@@ -576,7 +576,7 @@ public class ColorZones extends Canvas {
 				x.format("Did you do your after dinner chore?: " + YesOrNo[17] + " ");
 				x.format("Did you show any positive leadership or role model behaviors?: " + YesOrNo[18] + " ");
 				x.format("Did you work on any of your PAYA skills?: " + YesOrNo[19] + " ");
-				x.format("PERCENT: " + percent + "%");
+				x.format("PERCENT: " + percent);
 				x.close();
 			}
 		});
