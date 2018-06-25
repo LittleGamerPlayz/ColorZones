@@ -48,19 +48,19 @@ public class ColorZones extends Canvas {
 		jl[1] = new JLabel("Did you wake up on time and get on transportation?");
 		jl[2] = new JLabel("Did you make your bed in the morning?");
 		jl[3] = new JLabel("Did you remain in school throughout the day?");
-		jl[4] = new JLabel("Did you have appropriate boundries with peers and staff?");
+		jl[4] = new JLabel("Did you have appropriate boundaries with peers and staff?");
 		jl[5] = new JLabel("Did you have appropriate language with peers and staff?");
 		jl[6] = new JLabel("Did you do anything extra around the house?");
 		jl[7] = new JLabel("Did you follow staff prompts and program rules?");
-		jl[8] = new JLabel("Are your personal belongings orginized?");
+		jl[8] = new JLabel("Are your personal belongings organized?");
 		jl[9] = new JLabel("Did you work on any of your PAYA skills?");
 		jl[10] = new JLabel("Did you do well in tutoring or group?");
 		jl[11] = new JLabel("Did you have an appropriate dinner time routine?");
-		jl[12] = new JLabel("Did you do well while out in public if an offground activity occured?");
-		jl[13] = new JLabel("Did you handle tranitions/bed prep well tonight?");
-		jl[14] = new JLabel("Did you have appropriate boundries with peers and staff?");
+		jl[12] = new JLabel("Did you do well while out in public if an off ground activity occurred?");
+		jl[13] = new JLabel("Did you handle transitions/bed preparation well tonight?");
+		jl[14] = new JLabel("Did you have appropriate boundaries with peers and staff?");
 		jl[15] = new JLabel("Did you have appropriate language with peers and staff?");
-		jl[16] = new JLabel("Did you follow staff prompts and program rules througout the shift?");
+		jl[16] = new JLabel("Did you follow staff prompts and program rules throughout the shift?");
 		jl[17] = new JLabel("Did you do your after dinner chore?");
 		jl[18] = new JLabel("Did you show any positive leadership or role model behaviors?");
 		jl[19] = new JLabel("Did you work on any of your PAYA skills?");
@@ -549,7 +549,6 @@ public class ColorZones extends Canvas {
 
 					try {
 						x = new Formatter(nameInput.toUpperCase() + "'S YES OR NO SHEET " + dateInput + ".txt");
-						System.out.println("You created a file!");
 					} catch (Exception e1) {
 						System.out.println("Error detected!");
 					}
@@ -560,24 +559,24 @@ public class ColorZones extends Canvas {
 				x.format("Did you wake up on time and get on transportation?: " + YesOrNo[1] + " ");
 				x.format("Did you make your bed in the morning?: " + YesOrNo[2] + " ");
 				x.format("Did you remain in school throughout the day?: " + YesOrNo[3] + " ");
-				x.format("Did you have appropriate boundries with peers and staff?: " + YesOrNo[4] + " ");
+				x.format("Did you have appropriate boundaries with peers and staff?: " + YesOrNo[4] + " ");
 				x.format("Did you have appropriate language with peers and staff?: " + YesOrNo[5] + " ");
 				x.format("Did you do anything extra around the house?: " + YesOrNo[6] + " ");
 				x.format("Did you follow staff prompts and program rules?: " + YesOrNo[7] + " ");
-				x.format("Are your personal belongings orginized?: " + YesOrNo[8] + " ");
+				x.format("Are your personal belongings organized?: " + YesOrNo[8] + " ");
 				x.format("Did you work on any of your PAYA skills?: " + YesOrNo[9] + " ");
 				x.format("======== AFTERNOON (4pm - 12am) ======== ");
 				x.format("Did you do well in tutoring or group?: " + YesOrNo[10] + " ");
 				x.format("Did you have an appropriate dinner time routine?: " + YesOrNo[11] + " ");
-				x.format("Did you do well while out in public if an offground activity occured?: " + YesOrNo[12] + " ");
-				x.format("Did you handle tranitions/bed prep well tonight?: " + YesOrNo[13] + " ");
-				x.format("Did you have appropriate boundries with peers and staff?: " + YesOrNo[14] + " ");
+				x.format("Did you do well while out in public if an off ground activity occurred?: " + YesOrNo[12] + " ");
+				x.format("Did you handle transitions/bed preparation well tonight?: " + YesOrNo[13] + " ");
+				x.format("Did you have appropriate boundaries with peers and staff?: " + YesOrNo[14] + " ");
 				x.format("Did you have appropriate language with peers and staff?: " + YesOrNo[15] + " ");
-				x.format("Did you follow staff prompts and program rules througout the shift?: " + YesOrNo[16] + " ");
+				x.format("Did you follow staff prompts and program rules througHout the shift?: " + YesOrNo[16] + " ");
 				x.format("Did you do your after dinner chore?: " + YesOrNo[17] + " ");
 				x.format("Did you show any positive leadership or role model behaviors?: " + YesOrNo[18] + " ");
 				x.format("Did you work on any of your PAYA skills?: " + YesOrNo[19] + " ");
-				x.format("PERCENT: " + percent);
+				x.format("PERCENT: " + percent + "%");
 				x.close();
 			}
 		});
