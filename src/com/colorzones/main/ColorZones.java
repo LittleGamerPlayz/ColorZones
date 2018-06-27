@@ -6,6 +6,8 @@ import java.awt.FlowLayout;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
+import java.io.IOException;
 import java.util.Formatter;
 
 import javax.swing.JButton;
@@ -90,7 +92,7 @@ public class ColorZones extends Canvas {
 		}
 
 		panel.add(jb);
-		
+
 		jt[0].addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				input[0] = jt[0].getText();
@@ -546,15 +548,17 @@ public class ColorZones extends Canvas {
 
 					String dateInput = textDate.getText();
 					String nameInput = textName.getText();
-
+					
+					textDate.setEnabled(false);
+					textName.setEnabled(false);
+					
 					try {
-						x = new Formatter(nameInput.toUpperCase() + "'S YES OR NO SHEET " + dateInput + ".txt");
+						x = new Formatter("C:\\Program Files\\ColorZones\\" + nameInput.toUpperCase() + "'S YES OR NO SHEET " + dateInput + ".txt");
 					} catch (Exception e1) {
 						System.out.println("Error detected!");
 					}
 				}
 
-				x.format("MORNING (8am - 4pm) ");
 				x.format("Did you behave well during the overnight?: " + YesOrNo[0] + " ");
 				x.format("Did you wake up on time and get on transportation?: " + YesOrNo[1] + " ");
 				x.format("Did you make your bed in the morning?: " + YesOrNo[2] + " ");
@@ -565,10 +569,9 @@ public class ColorZones extends Canvas {
 				x.format("Did you follow staff prompts and program rules?: " + YesOrNo[7] + " ");
 				x.format("Are your personal belongings organized?: " + YesOrNo[8] + " ");
 				x.format("Did you work on any of your PAYA skills?: " + YesOrNo[9] + " ");
-				x.format("AFTERNOON (4pm - 12am) ");
 				x.format("Did you do well in tutoring or group?: " + YesOrNo[10] + " ");
 				x.format("Did you have an appropriate dinner time routine?: " + YesOrNo[11] + " ");
-				x.format("Did you do well while out in public if an off ground activity occurred?: " + YesOrNo[12] + " ");
+				x.format("Did you do well while out in public if an off ground activity occurred?: " + YesOrNo[12]+ " ");
 				x.format("Did you handle transitions/bed preparation well tonight?: " + YesOrNo[13] + " ");
 				x.format("Did you have appropriate boundaries with peers and staff?: " + YesOrNo[14] + " ");
 				x.format("Did you have appropriate language with peers and staff?: " + YesOrNo[15] + " ");
